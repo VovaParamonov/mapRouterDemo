@@ -1,0 +1,25 @@
+# IEA
+.idea
+.vscode
+
+# Package directories
+lerna-debug.log
+node_modules
+
+# Builds
+dis
+tsconfig.tsbuildinfo
+.build
+
+# serverless
+.serverless
+
+#env
+.env
+.env.prod
+.env.dev
+
+# NPM
+package-lock.json
+yarn.lock
+

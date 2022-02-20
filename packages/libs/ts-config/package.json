@@ -1,0 +1,18 @@
+{
+  "name": "@template_root/ts-config",
+  "version": "1.0.0",
+  "description": "Typescript settings",
+  "author": "Vladimir Paramonov <2000vovaparamonov@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": ""
+  },
+  "peerDependencies": {
+    "typescript": "^4.3.5"
+  }
+}

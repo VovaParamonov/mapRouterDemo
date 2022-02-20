@@ -1,0 +1,39 @@
+{
+  "name": "@template_root/root",
+  "author": "Vladimir Paramonov <2000vovaparamonov@gmail.com>",
+  "private": true,
+  "scripts": {
+    "bootstrap": "npm i & lerna bootstrap",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.0.5",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "@next/eslint-plugin-next": "^11.1.2",
+    "eslint-config-next": "^11.1.2",
+    "husky": "^7.0.2",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  },
+  "lint-staged": {
+    "*.{js, jsx, ts, tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "peerDependencies": {
+    "serverless": "^2.62.0"
+  }
+}
