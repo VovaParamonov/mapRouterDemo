@@ -1,11 +1,11 @@
-import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
+import React, { FunctionComponent, useEffect, useRef } from 'react';
 import { createMap, createAmplifyGeocoder  } from "maplibre-gl-js-amplify";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "maplibre-gl-js-amplify/dist/public/amplify-map.css";
 import "@maplibre/maplibre-gl-geocoder/dist/maplibre-gl-geocoder.css";
 import "maplibre-gl-js-amplify/dist/public/amplify-geocoder.css"; // Optional CSS for Amplify recommended styling
 import './Map.css';
-
+import useRouteCalculation from "../hooks/useRouteCalculation";
 
 type MapProps = {
 
@@ -37,6 +37,8 @@ const Map: FunctionComponent<MapProps> = (props) => {
       if (map != null) map.remove();
     };
   }, []);
+
+  useRouteCalculation();
 
   return <div ref={mapRef} id="map" className="fullheight-map" />;
 }
