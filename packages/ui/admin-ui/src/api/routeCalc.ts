@@ -24,5 +24,4 @@ export const testCalc = () => {
     if (err) console.log('Error while calculation', err, err.stack); // an error occurred
     else     console.log('Successful calculation: ', data);           // successful response
   });
-
 }

@@ -1,0 +1,41 @@
+.map__controls {
+    position: absolute;
+    min-width: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color: rgba(92, 92, 92, 0.34);
+
+    padding: 10px;
+
+    left: 10px;
+    top: 10px;
+
+    z-index: 2147483648;
+
+    color: whitesmoke;
+}
+
+.map__controls > * + * {
+    margin-top: 5px;
+}
+
+.map_controls__btn {
+    flex-shrink: 0;
+}
+
+.map_controls__btn + .map_controls__btn {
+    margin-top: 5px;
+}
+
+.map_controls__info {
+    padding: 5px 0;
+}
+
+.controls_ino__label {
+    font-weight: 500;
+    margin-right: 5px;
+}
