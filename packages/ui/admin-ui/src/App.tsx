@@ -1,28 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
-import useCategories from "./hooks/useCategories";
+import Map from "./Components/Map";
+import { Amplify } from "aws-amplify";
+
+console.log('Env test: ', process.env.REACT_APP_IDENTITY_POOL_ID);
+
+Amplify.configure({
+  Auth: {
+    identityPoolId: process.env.REACT_APP_IDENTITY_POOL_ID,
+    region: "us-east-1",
+  },
+  geo: {
+    AmazonLocationService: {
+      maps: {
+        items: {
+          "TravelingSalesmansTaskDemo": {
+            style: "VectorEsriDarkGrayCanvas"
+          },
+        },
+        default: "TravelingSalesmansTaskDemo",
+      },
+      region: "us-east-1",
+    },
+  }
+});
 
 function App() {
-  const { categories } = useCategories();
+  // const { categories } = useCategories();
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>{JSON.stringify(categories)}</p>
-      </header>
+        <Map />
     </div>
   );
 }

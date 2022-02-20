@@ -10,7 +10,8 @@
     "build-dep": "lerna run build --stream --scope=@template_root/admin-ui --include-dependencies"
   },
   "dependencies": {
-    "@template_root/catalog": "^1.0.0",
+    "@template_root/ts-config": "^1.0.0",
+    "aws-sdk": "^2.1077.0",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -18,12 +19,16 @@
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
+    "aws-amplify": "^4.3.14",
+    "axios": "^0.24.0",
+    "maplibre-gl": "^1.15.2",
+    "maplibre-gl-js-amplify": "^1.2.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.4.4",
     "web-vitals": "^1.1.2",
-    "axios": "^0.24.0"
+    "@aws-amplify/ui-react": "^2.5.0"
   },
   "devDependencies": {
     "@template_root/ts-config": "^1.0.0",
