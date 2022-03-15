@@ -2,14 +2,14 @@ import React, { FunctionComponent } from 'react';
 import './MapControls.css';
 
 type MapControlsProps = {
-  markersClear: () => void;
+  clearMap: () => void;
   markerCounter: number
+  routeCalculate: () => void;
 }
 
 const MapControls: FunctionComponent<MapControlsProps> = (props) => {
-  const { markersClear, markerCounter } = props;
+  const { clearMap, markerCounter, routeCalculate } = props;
   return <div className="map__controls">
-    <button onClick={markersClear} className='map_controls__btn map_controls__btn--clear'>Сбросить маркеры</button>
     <div className="map_controls__info">
       <span className="controls_ino__label">Кол-во маркеров:</span>
       <span className="controls_ino__value">
@@ -19,6 +19,8 @@ const MapControls: FunctionComponent<MapControlsProps> = (props) => {
         ) : null }
       </span>
     </div>
+    <button onClick={clearMap} className='map_controls__btn map_controls__btn--clear'>Очистить</button>
+    <button onClick={routeCalculate} className='map_controls__btn map_controls__btn--route_calc'>Рассчитать маршрут</button>
   </div>;
 }
 
