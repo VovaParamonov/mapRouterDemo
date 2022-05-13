@@ -1,8 +1,3 @@
-# mono_aws_react_template
+# Демонстрация работы генетического алгоритма в построении кротчайших маршрутов на карте (AWS + Google auth) для дипломной работы
 
-# Settings
 
-- `[ctrl + shift + r] '@template_root' -> '@PROJECT_NAME`
-- Change "author" in package.json files
-- Change "profiles" in serverless.yml
-- Run `npm i` + `lerna bootstrap` in root
